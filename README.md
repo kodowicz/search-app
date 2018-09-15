@@ -1,9 +1,8 @@
-# City Search App built with React.js :european_post_office:
+# City Search App
 
----
 
 ## Introduction
-This is my first huge React application. City Search App is used to find basic information about USA cities. To see the results check out [Github Pages link](https://kodowicz.github.io/search-app).
+This is my first huge React application. **City Search App** is used to find basic information about USA cities. To see the results check out [Github Pages link](https://kodowicz.github.io/search-app).
 
 ## Installation
 
@@ -15,11 +14,11 @@ This is my first huge React application. City Search App is used to find basic i
 ```
 
 ## Purposes
-- [:heavy_check_mark:] fetch data located in public API
-- [] show searching results by listing them
-- [] show details about each city if you are interested
-- [] delete the list of cities if input is cleared
-- [] implement good looking animations
+- [x] fetch data located in public API
+- [ ] show searching results by listing them
+- [ ] show details about each city if you are interested
+- [ ] delete the list of cities if input is cleared
+- [ ] implement good looking animations
 
 
 ## Built with

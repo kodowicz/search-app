@@ -6,4 +6,6 @@ const Footer = () => (
     <span>Anna Kotowicz ©  2018</span>
     <a href="">next project →</a>
   </footer>
-)
+);
+
+export default Footer;

@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import image from './images/background.jpg';
+
+const Application = styled.div`
+  background: url(${image}) center 35% / cover no-repeat;
+  height: 100vh;
+`;
+
 
 const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
 
@@ -56,11 +64,11 @@ export class FormProvider extends Component {
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Application>
         <Header />
         <Main />
         <Footer />
-      </React.Fragment>
+      </Application>
     );
   }
 }

@@ -11,7 +11,7 @@ const PageFooter = styled.footer`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
+
   & * {
     color: #ECEFF1;
     font-size: 14px;
@@ -26,7 +26,7 @@ const PageFooter = styled.footer`
 
 const Footer = () => (
   <PageFooter>
-    <a href="https://kodowicz.github.io/plantgang/">← prev project</a>
+    <a href="https://kodowicz.github.io/plant-shop/">← prev project</a>
     <span>Anna Kotowicz ©  2018</span>
     <a href="">next project →</a>
   </PageFooter>

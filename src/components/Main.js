@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { FormProvider } from '../App';
+import { FormProvider } from './App';
 import FormInput from './FormInput';
 import FormList from './FormList';
 

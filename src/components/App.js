@@ -1,13 +1,36 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import image from './images/background.jpg';
+import { createGlobalStyle } from 'styled-components';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+import image from '../images/background.jpg';
 
-const Application = styled.div`
-  background: url(${image}) center 35% / cover no-repeat;
-  height: 100vh;
+const Application = createGlobalStyle`
+  body {
+    background: url(${image}) center 35% / cover no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 26px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box
+  }
+
+  ul {
+    &::-webkit-scrollbar {
+      width: 7px;
+      background: rgba(0,0,0,.15);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,.5);
+      border-radius: 10px
+    }
+  }
 `;
 
 
@@ -19,7 +42,8 @@ export class FormProvider extends Component {
   state = {
     cities: [],
     matchedCities: [],
-    input: null
+    input: '',
+    inputHasContent: false
   }
 
   componentDidMount() {
@@ -42,14 +66,17 @@ export class FormProvider extends Component {
     return (
       <FormContext.Provider value={{
         state: this.state,
+
         inputHasContent: (event) => {
           if (event.target.value) {
             this.setState({
-              input: event.target.value
+              input: event.target.value,
+              inputHasContent: true
             })
           } else {
             this.setState({
-              input: ''
+              input: '',
+              inputHasContent: false
             })
           }
         }
@@ -61,16 +88,13 @@ export class FormProvider extends Component {
 }
 
 
-class App extends Component {
-  render() {
-    return (
-      <Application>
-        <Header />
-        <Main />
-        <Footer />
-      </Application>
-    );
-  }
-}
+const App = () => (
+  <React.Fragment>
+    <Application />
+    <Header />
+    <Main />
+    <Footer />
+  </React.Fragment>
+);
 
 export default App;
